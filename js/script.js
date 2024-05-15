@@ -4,6 +4,17 @@
 // Created on: May 2024
 // This file contains the JS functions for index.html
 
+"use strict"
+
+/**
+ * Check servie worker.
+ */
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/ICD2O-Unit-5-08-clara-tyman-PWA/sw.js", {
+    scope: "/ICD2O-Unit-5-08-clara-tyman-PWA/",
+  })
+}
+
 function myButtonClicked() {
   // define numbers
   const firstNumber = parseFloat(document.getElementById("first-number").value)
